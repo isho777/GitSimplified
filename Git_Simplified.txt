@@ -59,6 +59,14 @@ initialise git just in case it wasnt initilized:
 c:\code\project1\git init
 If you're working on the main folder add the files to your local repo
 
+Set the remote address (Very important to ensure what you will push will go to the right place)
+c:\code\project1\git remote set-url <remote_name> <remote_url>
+
+
+set a local branch name on your machine
+  c:\code\project1\git branch -M master
+
+
 c:\code\project1\git add src
 src contains important project files and asssuming 'src' is in project1 folder
 
