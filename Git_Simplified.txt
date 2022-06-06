@@ -1,0 +1,93 @@
+I will make git simple for you just follow through:
+
+Make sure you know you git remote repo url
+
+eg https://github.com/john/project1.git <--- note 'project1' folder
+
+This is the central repository for all people woking on project1, usually created by project owner.
+
+They must give you the link to the repo url eg by email so as to copy the url
+
+Once youre on the repo on the git website, look for the green tab 'Code' and copy the url of the project from there
+
+2. project1 in the url can contain main project files in which case you will find main project files like src folder and pom.xml file (java project)
+
+but if not then it probably contains other folders that do contain files like src folder and pom.xml
+
+Just keep in mind that you will cd into those folders later on
+
+If you already have the same project on your machine ensure it is in project1 folder
+
+example: c:\code\project1
+
+But try not to create the folder 'project1' manually, use git Desktop tool:
+
+Download git Desktop tool from website: https://git-scm.com/download/win
+
+How to use Git tool to clone project1 from git repo to your local machine?
+
+1.1 Launch the git tool
+
+1.2 Click 'Clone Existing repository'
+
+1.3 'Source location' must be set eg. https://github.com/john/project1.git
+
+'Target Location' must be set eg. c:\code\project1<--make sure 'project1' does Not exist yet so git can create it for you!!!
+
+but you already have the path "c:\code\"
+
+1.4 Click 'Clone'
+
+3. If you can see the cloned files in your local machine, bravo!!
+
+>>> Make sure files are edited before you try to push changes back to git repo!!!
+
+This is one of major headache of
+
+git when it doesnt detect any file changes to push back to the git repo
+
+Just open files eg using an IDE and type space character or something in at least 1 file and save files
+
+4. Launch terminal eg Command prompt in order to run git commands.
+
+CD to c:\code\project1 on the terminal
+
+eg: cd c:\code\project1
+
+initialise git just in case it wasnt initilized:
+
+c:\code\project1\git init
+If you're working on the main folder add the files to your local repo
+
+c:\code\project1\git add src
+src contains important project files and asssuming 'src' is in project1 folder
+
+c:\code\project1\git add pom.xml
+pom.xml is an independet file in project1 folder
+
+If you're also editing files in a folder within project1 (happens a lot) then do
+
+c:\code\project1\git add subfolder\AnotherProject\src
+Because you have edited those files as well
+
+c:\code\project1\git add subfolder\AnotherProject\pom.xml
+Now commit:
+
+c:\code\project1\git commit -a
+This commits only the changed files and folders (recommended)
+
+git commit .
+git commit . This commits all files and folders
+
+Now pull to prepare and connect origin and master branch.
+
+origin is remote repo
+
+master is local repo on your machine
+
+eg.
+
+c:\code\project1\git pull origin master
+Finally push to origin:
+
+c:\code\project1\git push origin master
